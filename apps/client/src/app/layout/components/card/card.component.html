@@ -1,0 +1,39 @@
+<div class="card bg-dark-100 mb-3 relative cursor-pointer"
+[class.border-vue-500]="todoList.source === 'vue'"
+[class.border-angular-500]="todoList.source === 'angular'"
+[class.border-react-500]="todoList.source === 'react'"
+[class.border-next-400]="todoList.source === 'next'">
+ <button (click)="onDelete(todoList)"
+   class="flex justify-end absolute right-1 top-1 text-accent-300">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+   </svg>
+ </button>
+ <div class="p-3" (click)="onEdit(todoList)">
+   <div class="flex flex-row">
+     <div class="basis-4/5 overflow-hidden">
+       <div class="text-start text-lg font-bold"
+       [class.text-vue-500]="todoList.source === 'vue'"
+       [class.text-angular-500]="todoList.source === 'angular'"
+       [class.text-react-500]="todoList.source === 'react'"
+       [class.text-next-400]="todoList.source === 'next'"
+       >{{todoList.title }}</div>
+       <div class="text-start text-sm truncate-2-lines">
+         {{todoList.description }}
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="card-footer rounded-b-md px-3 py-1 ">
+   <div class="flex justify-between">
+     <img [src]="imagePath" width="20" height="20">
+     <div>
+       <span class="me-3 text-sm font-semibold">{{
+         onHandleFormatDateToShort(todoList.update_date) }}</span>
+       <span class="text-sm font-semibold">{{
+         onHandleFormatTime(todoList.update_date) }}</span>
+     </div>
+   </div>
+ </div>
+</div>
