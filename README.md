@@ -1,5 +1,5 @@
 # ข้อสอบ Full Stack Developer
-## ให้พัฒนาระบบ CRUD อย่างง่าย
+## 1. ให้พัฒนาระบบ CRUD อย่างง่าย
 ### ToDoList CRUD app
 ### Tool
 - Fornt-End : Angular + TailwindUI
@@ -12,8 +12,10 @@
 - To start both the development server run FrontEnd & BackEnd `npm run start`. Open your browser and navigate to http://localhost:4200.  
 - To start Unit Test `npm run test:all`.
 
- 
- ## 2.  ถ้ามีระบบสำหรับรับข้อความแชทจาก Facebook Page ผ่านทาง Webhook ไป process ต่อ วันละ 1000 ข้อความต่อวินาทีแบบ Real Time โดยที่ process time ต่อ 1 ข้อความประมาณ 1 วินาที จะออกแบบระบบ, ทดสอบ และ Monitoring อย่างไร
+## 2. ถ้ามีระบบสำหรับรับข้อความแชทจาก Facebook Page ผ่านทาง Webhook ไป process ต่อ วันละ 1000 ข้อความต่อวินาทีแบบ Real Time โดยที่ process time ต่อ 1 ข้อความประมาณ 1 วินาที จะออกแบบระบบ, ทดสอบ และ Monitoring อย่างไร
 
+
+
+## 3 .จงออกข้อสอบเองพร้อมเฉลย
 
 
