@@ -14,9 +14,8 @@ export class CardComponent implements OnInit {
   @Input() todoList!: ToDoList
   @Output() emitTriggerUpdate = new EventEmitter<boolean>();
   @Output() emitTriggerEdit = new EventEmitter<EditTodoList>();
-  @Output() emitTriggerData = new EventEmitter<ToDoList>();
 
-  imagePath = ``;
+  imagePath?: string;
 
   constructor(private httpService: HttpService) { }
 
@@ -36,7 +35,7 @@ export class CardComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    this.imagePath = `assets/images/${this.todoList.source}.svg`;
+    this.imagePath = `assets/images/${this.todoList?.source}.svg`;
   }
 
   onDelete(item: ToDoList) {
@@ -68,7 +67,7 @@ export class CardComponent implements OnInit {
   }
 
   get borderClass() {
-    return this.todoList.source ? `bg-${this.todoList.source}-100` : '';
+    return this.todoList?.source ? `bg-${this.todoList?.source}-100` : '';
   }
 
 }

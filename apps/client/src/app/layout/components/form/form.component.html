@@ -1,7 +1,7 @@
 <div
   class="card bg-dark-100 tablet:w-100 h-fix m-auto border-2 p-3">
   <div class="text-3xl font-semibold mb-5 text-center">
-    {{ editData?.isEdit ? "Update : " + editData?.title : "Create" }}
+    <span class="title">{{ editData?.isEdit ? "Update : " + editData?.title : "Create" }}</span>
   </div>
   <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
     <div class="mb-2">

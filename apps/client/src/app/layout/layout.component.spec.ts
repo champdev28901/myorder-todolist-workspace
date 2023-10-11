@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { LayoutComponent } from './layout.component';
+import { HttpService } from '../service/http.service';
+import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from './components/card/card.component';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
@@ -8,7 +12,13 @@ describe('LayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LayoutComponent ]
+      imports: [
+        HttpClientTestingModule,
+        ReactiveFormsModule
+      ],
+      declarations: [ LayoutComponent, FormComponent, CardComponent ],
+      providers: [HttpService],
+
     })
     .compileComponents();
 

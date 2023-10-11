@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
     "start:client": "nx serve client",
-    "start:server": "nx serve server"
+    "start:server": "nx serve server",
+    "test:all": "nx run-many --all --target=test"
   },
   "private": true,
   "dependencies": {
@@ -54,11 +56,13 @@
     "@nx/webpack": "16.10.0",
     "@nx/workspace": "16.10.0",
     "@schematics/angular": "~16.2.0",
+    "@types/jasmine": "^5.1.0",
     "@types/jest": "^29.4.0",
     "@types/node": "~18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "autoprefixer": "^10.4.0",
+    "concurrently": "^8.2.1",
     "cypress": "^13.0.0",
     "eslint": "~8.46.0",
     "eslint-config-prettier": "8.1.0",

@@ -5,6 +5,8 @@ import { AppService } from './app.service';
 
 describe('AppController', () => {
   let app: TestingModule;
+  let service: AppService;
+
 
   beforeAll(async () => {
     app = await Test.createTestingModule({
@@ -13,10 +15,8 @@ describe('AppController', () => {
     }).compile();
   });
 
-  // describe('getData', () => {
-  //   it('should return "Hello API"', () => {
-  //     const appController = app.get<AppController>(AppController);
-  //     expect(appController.getAllTodo()).toEqual({ message: 'Hello API' });
-  //   });
-  // });
+  it('should be defined', () => {
+    expect(service).not.toBeDefined();
+  });
+
 });

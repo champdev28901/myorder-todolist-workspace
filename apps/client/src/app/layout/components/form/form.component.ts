@@ -24,7 +24,6 @@ export class FormComponent implements OnInit, OnChanges {
 
 
   ngOnInit(): void {
-    console.log(this.dataFrom, "[dataFrom]")
     this.updateForm = this.fb.group({
       title: this.fb.control("", Validators.required),
       description: this.fb.control("", Validators.required),
